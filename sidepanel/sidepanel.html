@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chrome AI Playground</title>
+  <link rel="stylesheet" href="../styles/shared.css">
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <header class="header">
+    <h1 class="header-title">AI Playground</h1>
+    <span id="status-badge" class="status-badge status-loading">Checking…</span>
+  </header>
+
+  <main class="main">
+    <!-- Input -->
+    <section class="input-section">
+      <label for="input-text" class="label">Input</label>
+      <textarea
+        id="input-text"
+        rows="5"
+        placeholder="Type or paste text here, or select text on any page…"
+      ></textarea>
+      <button id="btn-grab-selection" class="btn btn-sm" title="Grab selected text from the active page">
+        Grab page selection
+      </button>
+    </section>
+
+    <!-- Actions -->
+    <section class="actions">
+      <button class="btn" id="btn-summarize" disabled>Summarize</button>
+      <button class="btn" id="btn-rewrite" disabled>Rewrite</button>
+      <button class="btn" id="btn-translate" disabled>Translate</button>
+      <button class="btn" id="btn-proofread" disabled>Proofread</button>
+      <button class="btn btn-primary" id="btn-prompt" disabled>Prompt</button>
+    </section>
+
+    <!-- Output -->
+    <section class="output-section">
+      <label class="label">Output</label>
+      <div id="output" class="output-box">
+        <p class="placeholder-text">
+          Results will appear here. Use the buttons above or ask Claude Code to
+          wire up an AI feature.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>

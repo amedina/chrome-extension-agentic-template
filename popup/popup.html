@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chrome AI Playground</title>
+  <link rel="stylesheet" href="../styles/shared.css">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="popup-header">
+    <h1 class="popup-title">AI Playground</h1>
+    <span id="status-badge" class="status-badge status-loading">Checking…</span>
+  </header>
+
+  <section class="api-list" id="api-list">
+    <!-- Populated by popup.js -->
+  </section>
+
+  <button id="btn-open-sidepanel" class="btn btn-primary btn-block">
+    Open Side Panel
+  </button>
+
+  <footer class="popup-footer">
+    <p>Enable APIs via <a href="chrome://flags" id="link-flags">chrome://flags</a></p>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>

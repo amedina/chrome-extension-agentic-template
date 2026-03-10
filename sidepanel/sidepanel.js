@@ -96,6 +96,18 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ------------------------------------------------------------------
+  // Active button highlighting
+  // ------------------------------------------------------------------
+
+  const actionButtons = [btnSummarize, btnRewrite, btnTranslate, btnProofread, btnPrompt];
+
+  function setActiveButton(activeBtn) {
+    for (const btn of actionButtons) {
+      btn.classList.toggle("btn-primary", btn === activeBtn);
+    }
+  }
+
+  // ------------------------------------------------------------------
   // Action button handlers
   //
   // Each handler below is a placeholder. Ask Claude Code to implement
@@ -103,6 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // ------------------------------------------------------------------
 
   btnSummarize.addEventListener("click", () => {
+    setActiveButton(btnSummarize);
     const text = inputText.value.trim();
     if (!text) return showPlaceholder("Enter some text first.");
 
@@ -114,6 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   btnRewrite.addEventListener("click", () => {
+    setActiveButton(btnRewrite);
     const text = inputText.value.trim();
     if (!text) return showPlaceholder("Enter some text first.");
 
@@ -125,6 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   btnTranslate.addEventListener("click", () => {
+    setActiveButton(btnTranslate);
     const text = inputText.value.trim();
     if (!text) return showPlaceholder("Enter some text first.");
 
@@ -136,6 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   btnProofread.addEventListener("click", () => {
+    setActiveButton(btnProofread);
     const text = inputText.value.trim();
     if (!text) return showPlaceholder("Enter some text first.");
 
@@ -147,6 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   btnPrompt.addEventListener("click", () => {
+    setActiveButton(btnPrompt);
     const text = inputText.value.trim();
     if (!text) return showPlaceholder("Enter a prompt first.");
 
